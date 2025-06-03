@@ -1,4 +1,4 @@
-package com.mdm_service.mdm_service;
+package br.edu.pucrs.mdm_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

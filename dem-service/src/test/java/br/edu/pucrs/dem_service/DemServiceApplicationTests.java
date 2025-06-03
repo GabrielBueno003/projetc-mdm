@@ -1,4 +1,4 @@
-package com.dem_service.dem_service;
+package br.edu.pucrs.dem_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
