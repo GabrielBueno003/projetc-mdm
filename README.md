@@ -6,7 +6,7 @@ Este repositório contém uma prova de conceito de um sistema MDM composto por m
 
 * [Visão Geral do Projeto](#visão-geral-do-projeto)
 * [Arquitetura do Sistema](#arquitetura-do-sistema)
-* [Fluxos de Dados](#fluxos-de-dados)
+* [Fluxo de Dados](#fluxo-de-dados)
 * [Estrutura do Repositório](#estrutura-do-repositório)
 * [Tecnologias Utilizadas](#tecnologias-utilizadas)
 * [Pré-requisitos](#pré-requisitos)
