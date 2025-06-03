@@ -129,16 +129,16 @@ JSON
         ]
     }
 
-GET /countries
-Lista todos os países cadastrados.
+**GET** /countries
+* Lista todos os países cadastrados.
 
-GET /countries/{id}
-Busca um país específico por seu código ISO.
+**GET** /countries/{id}
+* Busca um país específico por seu código ISO.
 
-PUT /countries/{id}
-Atualiza os dados de um país existente pelo seu código ISO.
+**PUT** /countries/{id}
+* Atualiza os dados de um país existente pelo seu código ISO.
 
-Exemplo de corpo da requisição (atualiza o nome do Brasil):
+**Exemplo de corpo da requisição (atualiza o official name do Brasil):**
 JSON
 
     {
@@ -170,17 +170,19 @@ JSON
         ]
     }
 
-DELETE /countries/{id}
-Deleta um país específico por seu código ISO.
+**DELETE:** /countries/{id}
+* Deleta um país específico por seu código ISO.
 
-DELETE /countries
-Deleta todos os países cadastrados no sistema.
+**DELETE** /countries/AUTH-GSB
+* Deleta todos os países cadastrados no sistema.
+
+---
 
 ### DEM Service (Porta: 8081)
 Controlador: EtlController (/etl)
 Gerencia a execução de processos de ETL (Extract, Transform, Load).
 
-GET /etl/{domain}
+**GET** /etl/{domain}
 Inicia um processo ETL para o domínio de dados especificado.
 Parâmetro de Path: domain (String) - O nome do domínio para o qual o ETL será executado (ex: countries).
 
