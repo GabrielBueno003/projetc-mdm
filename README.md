@@ -6,12 +6,12 @@ Este repositório contém uma prova de conceito de um sistema MDM composto por m
 
 * [Visão Geral do Projeto](#visão-geral-do-projeto)
 * [Arquitetura do Sistema](#arquitetura-do-sistema)
+* [Fluxos de Dados](#fluxos-de-dados)
 * [Estrutura do Repositório](#estrutura-do-repositório)
 * [Tecnologias Utilizadas](#tecnologias-utilizadas)
 * [Pré-requisitos](#pré-requisitos)
 * [Como Rodar o Projeto](#como-rodar-o-projeto)
 * [Endpoints da API](#endpoints-da-api)
-* [Fluxos de Dados](#fluxos-de-dados)
 * [Integração de Novos Domínios](#integração-de-novos-domínios)
 
 ---
@@ -34,6 +34,8 @@ O sistema é composto por dois microserviços principais:
 1.  **`mdm-service`**: Responsável pela gestão dos dados mestres. Atualmente, gerencia o domínio de `Países`. Pode ser estendido para outros domínios (ex: `Produtos`, `Clientes`).
 2.  **`dem-service`**: Focado nos processos de evolução e transformação de dados. Este serviço interage com o `mdm-service` para orquestrar e aplicar mudanças nos dados mestres.
 
+
+### Fluxo de Dados
 
 ![Arquitetura do Sistema](/AUX/diagrama.png)
 
