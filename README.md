@@ -37,4 +37,5 @@ O sistema é composto por dois microserviços principais:
 1.  **`mdm-service`**: Responsável pela gestão dos dados mestres. Atualmente, gerencia o domínio de `Países`. Pode ser estendido para outros domínios (ex: `Produtos`, `Clientes`).
 2.  **`dem-service`**: Focado nos processos de evolução e transformação de dados. Este serviço interage com o `mdm-service` para orquestrar e aplicar mudanças nos dados mestres.
 
-(/AUX/diagrama.png)
+
+![Arquitetura do Sistema](/AUX/diagrama.png)
