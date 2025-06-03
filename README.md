@@ -40,8 +40,6 @@ O sistema é composto por dois microserviços principais:
 
 ![Arquitetura do Sistema](/AUX/diagrama.png)
 
-*(**Ação:** Substitua o diagrama de texto por uma imagem real do diagrama de arquitetura, se possível. Ferramentas como Draw.io, Lucidchart ou Mermaid no próprio Markdown podem ajudar.)*
-
 ---
 
 ## Estrutura do Repositório
@@ -51,7 +49,7 @@ O repositório está organizado em módulos Maven, cada um representando um micr
 * `mdm-service/`: Contém o código-fonte e configurações do serviço de gerenciamento de dados mestres.
 * `dem-service/`: Contém o código-fonte e configurações do serviço de evolução de dados.
 * `README.md`: Este arquivo, descrevendo o projeto em alto nível.
-* `docs/` (Opcional): Diretório para documentação adicional, diagramas, etc.
+* `AUX/` (Opcional): Diretório para documentação adicional, diagramas, etc.
 
 ---
 
@@ -88,3 +86,105 @@ mvn spring-boot:run
 #### Abra outro terminal para o dem-service
 cd ../dem-service
 mvn spring-boot:run
+
+
+## Endpoints da API
+Aqui está um resumo dos principais endpoints disponíveis em cada microserviço. Para o detalhamento completo de cada um, consulte a documentação interativa via Swagger UI.
+
+### MDM Service (Porta: 8080)
+Controlador: CountryController (/countries)
+Gerencia os dados mestres de países.
+
+POST /countries
+Cria um novo país.
+Exemplo de corpo da requisição:
+JSON
+
+    {
+        "isoCode": "BRA",
+        "commonName": "Brazil",
+        "officialName": "Federative Republic of Brazil",
+        "region": "Americas",
+        "subregion": "South America",
+        "area": 8515767.0,
+        "population": 213993437,
+        "geoLocation": {
+            "latitude": -10.0,
+            "longitude": -55.0
+        },
+        "capitals": ["Brasília"],
+        "currencies": [
+            {
+            "code": "BRL",
+            "name": "Brazilian Real",
+            "symbol": "R$"
+            }
+        ],
+        "translations": [
+            {
+            "languageCode": "por",
+            "officialName": "República Federativa do Brasil",
+            "commonName": "Brasil"
+            }
+        ]
+    }
+
+GET /countries
+Lista todos os países cadastrados.
+
+GET /countries/{id}
+Busca um país específico por seu código ISO.
+
+PUT /countries/{id}
+Atualiza os dados de um país existente pelo seu código ISO.
+
+Exemplo de corpo da requisição (atualiza o nome do Brasil):
+JSON
+
+    {
+        "isoCode": "BRA",
+        "commonName": "Brazil",
+        "officialName": "República Federativa do Brasil",
+        "region": "Americas",
+        "subregion": "South America",
+        "area": 8515767.0,
+        "population": 213993437,
+        "geoLocation": {
+            "latitude": -10.0,
+            "longitude": -55.0
+        },
+        "capitals": ["Brasília"],
+        "currencies": [
+            {
+            "code": "BRL",
+            "name": "Brazilian Real",
+            "symbol": "R$"
+            }
+        ],
+        "translations": [
+            {
+            "languageCode": "por",
+            "officialName": "República Federativa do Brasil",
+            "commonName": "Brasil"
+            }
+        ]
+    }
+
+DELETE /countries/{id}
+Deleta um país específico por seu código ISO.
+
+DELETE /countries
+Deleta todos os países cadastrados no sistema.
+
+### DEM Service (Porta: 8081)
+Controlador: EtlController (/etl)
+Gerencia a execução de processos de ETL (Extract, Transform, Load).
+
+GET /etl/{domain}
+Inicia um processo ETL para o domínio de dados especificado.
+Parâmetro de Path: domain (String) - O nome do domínio para o qual o ETL será executado (ex: countries).
+
+Exemplo de uso: GET http://localhost:8081/etl/countries
+Exemplo de Resposta (200 OK): "ETL para 'countries' iniciado com sucesso!"
+Exemplo de Resposta (400 Bad Request): "Domínio 'xyz' não reconhecido ou suportado."
+Exemplo de Resposta (500 Internal Server Error): "Erro ao processar ETL para 'countries': Erro de conexão com o banco de dados."
