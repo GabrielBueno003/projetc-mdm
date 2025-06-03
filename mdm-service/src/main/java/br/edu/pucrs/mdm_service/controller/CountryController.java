@@ -58,12 +58,12 @@ public class CountryController {
 
     @DeleteMapping("/AUTH-GSB")
     public ResponseEntity<Void> deleteAll() {
-        long count = repository.count(); // Opcional: para verificar se há algo para deletar
+        long count = repository.count();
         if (count > 0) {
             repository.deleteAll();
-            return ResponseEntity.noContent().build(); // 204 No Content
+            return ResponseEntity.noContent().build();
         } else {
-            return ResponseEntity.status(HttpStatus.OK).build(); // Ou 200 OK se já estiver vazio
+            return ResponseEntity.status(HttpStatus.OK).build();
         }
     }
 }
