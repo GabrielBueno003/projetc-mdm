@@ -81,10 +81,10 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
 Não há necessidade de usar Docker já que o banco H2 será instanciado localmente
 
-# Para o mdm-service
+#### Para o mdm-service
 cd mdm-service
 mvn spring-boot:run
 
-# Abra outro terminal para o dem-service
+#### Abra outro terminal para o dem-service
 cd ../dem-service
 mvn spring-boot:run
