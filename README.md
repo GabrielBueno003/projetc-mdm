@@ -39,3 +39,52 @@ O sistema é composto por dois microserviços principais:
 
 
 ![Arquitetura do Sistema](/AUX/diagrama.png)
+
+*(**Ação:** Substitua o diagrama de texto por uma imagem real do diagrama de arquitetura, se possível. Ferramentas como Draw.io, Lucidchart ou Mermaid no próprio Markdown podem ajudar.)*
+
+---
+
+## Estrutura do Repositório
+
+O repositório está organizado em módulos Maven, cada um representando um microserviço:
+
+* `mdm-service/`: Contém o código-fonte e configurações do serviço de gerenciamento de dados mestres.
+* `dem-service/`: Contém o código-fonte e configurações do serviço de evolução de dados.
+* `README.md`: Este arquivo, descrevendo o projeto em alto nível.
+* `docs/` (Opcional): Diretório para documentação adicional, diagramas, etc.
+
+---
+
+## Tecnologias Utilizadas
+
+* **Backend:** Java 17+, Spring Boot 3.5.0
+* **Base de Dados:** H2
+* **Ferramenta de Build:** Maven
+* **Documentação API:** Springdoc OpenAPI (Swagger UI)
+* **Gerenciamento de Dependências:** Lombok
+
+---
+
+## Pré-requisitos
+
+Certifique-se de ter os seguintes softwares instalados em sua máquina:
+
+* **Java Development Kit (JDK) 17 ou superior**
+* **Maven 3.6.0 ou superior**
+* **H2** (instalado localmente)
+
+---
+
+## Como Rodar o Projeto
+
+### 1. Configurar o Banco de Dados
+
+Não há necessidade de usar Docker já que o banco H2 será instanciado localmente
+
+# Para o mdm-service
+cd mdm-service
+mvn spring-boot:run
+
+# Abra outro terminal para o dem-service
+cd ../dem-service
+mvn spring-boot:run
