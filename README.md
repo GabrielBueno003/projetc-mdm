@@ -192,8 +192,6 @@ Gerencia a execução de processos de ETL (Extract, Transform, Load).
 
 ---
 
----
-
 ## 🧩 Integração de Novos Domínios
 
 A arquitetura modular do projeto simplifica a adição de novos domínios de dados mestres, como **Produtos**, **Clientes** ou **Fornecedores**. Para integrar um novo domínio, siga estes passos gerais:
