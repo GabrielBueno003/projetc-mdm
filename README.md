@@ -10,7 +10,6 @@ Este repositório contém uma prova de conceito de um sistema MDM composto por m
 * [Tecnologias Utilizadas](#tecnologias-utilizadas)
 * [Pré-requisitos](#pré-requisitos)
 * [Como Rodar o Projeto](#como-rodar-o-projeto)
-* [Documentação das APIs](#documentação-das-apis)
 * [Endpoints da API](#endpoints-da-api)
 * [Fluxos de Dados](#fluxos-de-dados)
 * [Integração de Novos Domínios](#integração-de-novos-domínios)
@@ -88,7 +87,7 @@ mvn spring-boot:run
 
 ---
 
-## 🌐 Endpoints da API
+## Endpoints da API
 
 Esta seção oferece um resumo dos principais endpoints disponíveis em cada microserviço. Para o detalhamento completo de cada um, incluindo parâmetros, exemplos de requisição/resposta e modelos de dados, consulte a documentação interativa via Swagger UI.
 
@@ -192,7 +191,7 @@ Gerencia a execução de processos de ETL (Extract, Transform, Load).
 
 ---
 
-## 🧩 Integração de Novos Domínios
+## Integração de Novos Domínios
 
 A arquitetura modular do projeto simplifica a adição de novos domínios de dados mestres, como **Produtos**, **Clientes** ou **Fornecedores**. Para integrar um novo domínio, siga estes passos gerais:
 
