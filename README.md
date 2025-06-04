@@ -1,5 +1,5 @@
 # Projeto MDM (Master Data Management) & DEM (Data Evolution Management) 
-**Realizadores: ** Gabriel da Silva Bueno e Arthur Ávila
+**Realizadores:** Gabriel da Silva Bueno e Arthur Ávila
 
 Este repositório contém uma prova de conceito de um sistema MDM composto por microserviços integrados (MDM e DEM), projetado para gerenciar múltiplos domínios de dados mestres e suportar processos ETL (Extract, Transform, Load) para a evolução dos dados.
 
